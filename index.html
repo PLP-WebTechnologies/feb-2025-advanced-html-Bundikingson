@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+<body>
+    <!-- Ordered list with Roman numerals -->
+    <section>
+        <h2>Ordered List with Roman Numerals</h2>
+        <ol type="I">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+            <li>Fourth item</li>
+        </ol>
+    </section>
 
+    <!-- External image from pexels.com -->
+    <section>
+        <h2>Sample Image from Pexels</h2>
+        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" 
+             alt="Beautiful landscape with river and trees" 
+             width="600"
+             style="max-width: 100%; height: auto;">
+    </section>
+
+    <!-- Contacts table -->
+    <section>
+        <h2>Contact List</h2>
+        <table border="1" cellpadding="8" style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>123 Main St, Anytown</td>
+                    <td>555-0101</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>456 Oak Ave, Somewhere</td>
+                    <td>555-0202</td>
+                    <td>jane@example.com</td>
+                </tr>
+                <tr>
+                    <td>Bob Johnson</td>
+                    <td>789 Pine Rd, Nowhere</td>
+                    <td>555-0303</td>
+                    <td>bob@example.com</td>
+                </tr>
+                <tr>
+                    <td>Alice Brown</td>
+                    <td>321 Elm Blvd, Anywhere</td>
+                    <td>555-0404</td>
+                    <td>alice@example.com</td>
+                </tr>
+                <tr>
+                    <td>Charlie Wilson</td>
+                    <td>654 Maple Ln, Everywhere</td>
+                    <td>555-0505</td>
+                    <td>charlie@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration form -->
+    <section>
+        <h2>Registration Form</h2>
+        <form id="registrationForm" action="/submit" method="post">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" 
+                           placeholder="Enter your full name" required
+                           minlength="3" maxlength="50">
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" 
+                           placeholder="Enter your email" required>
+                </div>
+                
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" 
+                           placeholder="Create a password" required
+                           minlength="8" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                           title="Minimum 8 characters, at least one letter and one number">
+                </div>
+                
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </fieldset>
+
+            <!-- Additional Information -->
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div>
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label>Gender:</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Interests:</label>
+                    <div>
+                        <input type="checkbox" id="sports" name="interests" value="sports">
+                        <label for="sports">Sports</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="music" name="interests" value="music">
+                        <label for="music">Music</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="reading" name="interests" value="reading">
+                        <label for="reading">Reading</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="travel" name="interests" value="travel">
+                        <label for="travel">Travel</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Terms and Submit -->
+            <div>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+</body>
+</html>
